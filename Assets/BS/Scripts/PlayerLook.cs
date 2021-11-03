@@ -6,6 +6,7 @@ public class PlayerLook : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
     public Transform cameraTransform;
+    public Camera fpsCamera = null;
 
     float xRotation = 0f;
 
@@ -13,6 +14,7 @@ public class PlayerLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        fpsCamera.fieldOfView = Settings.cameraFov;
     }
 
     // Update is called once per frame
