@@ -4,21 +4,34 @@ using UnityEngine;
 
 public class WeaponShooting : MonoBehaviour
 {
-    public GameObject energyBall = null, bolt = null, laserGun = null, crossBow = null;
-    public Transform laserBarrel = null, crossBowBarrel = null;
+    [Header("Game Objects")] // GameObjects to be assigned in the inspector
+    [SerializeField]
+    private GameObject laserGun = null;
+    [SerializeField]
+    private GameObject crossBow = null;
+    [SerializeField]
+    private GameObject energyBall = null;
+    [SerializeField]
+    private GameObject bolt = null;
+    [SerializeField]
+    private Transform laserBarrel = null, crossBowBarrel = null;
 
+    [Header("Laser Gun")] // Laser gun Variables
+    public float laserSpeed = 1000;
+
+    [Header("Crossbow")] // Crossbow Variables
+    public float boltSpeed = 500;
+
+    // Private Variables
     GameObject bullet;
     Transform barrel;
-
-    public float bulletSpeed = 1000f;
-
+    float bulletSpeed = 0f;
     bool isLaserWeapon = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        bullet = bolt;
-        barrel = crossBowBarrel;
+        
     }
 
     // Update is called once per frame
@@ -32,6 +45,7 @@ public class WeaponShooting : MonoBehaviour
             crossBow.gameObject.SetActive(false);
             barrel = laserBarrel;
             bullet = energyBall;
+            bulletSpeed = laserSpeed;
         }
         else
         {
@@ -39,6 +53,7 @@ public class WeaponShooting : MonoBehaviour
             crossBow.gameObject.SetActive(true);
             barrel = crossBowBarrel;
             bullet = bolt;
+            bulletSpeed = boltSpeed;
         }
     }
     void ReactToInput()
