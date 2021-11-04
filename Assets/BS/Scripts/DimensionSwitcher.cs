@@ -11,7 +11,7 @@ public class DimensionSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonUp("DimensionSwitch"))
+        if(Input.GetButtonUp("DimensionSwitch") && !Settings.isPaused)
         {
             SwitchDim();
         }    

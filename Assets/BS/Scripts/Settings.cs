@@ -5,4 +5,6 @@ using UnityEngine;
 public class Settings : MonoBehaviour
 {
     public static int cameraFov = 60;
+
+    public static bool isPaused = false;
 }
