@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float lifeTime = 10f;
+    public GameObject hitParticle;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -16,10 +17,7 @@ public class Bullet : MonoBehaviour
                 break;
 
             case "Object":
-                Destroy(gameObject);
-                break;
-
-            case "Player":
+                Instantiate(hitParticle, transform.position, Quaternion.identity);
                 Destroy(gameObject);
                 break;
         }
