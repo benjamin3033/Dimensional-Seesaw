@@ -49,9 +49,9 @@ GameObject:
   - component: {fileID: 5265157431723931012}
   - component: {fileID: 1145903546788556767}
   - component: {fileID: 1155026125418485499}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stairs
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,9 +145,9 @@ GameObject:
   - component: {fileID: 8545240940335311578}
   - component: {fileID: 8484230522205559011}
   - component: {fileID: 928595963623470308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,9 +240,9 @@ GameObject:
   - component: {fileID: 6159984406551265954}
   - component: {fileID: 8607598793753795633}
   - component: {fileID: 2202592091743516408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Back Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,9 +335,9 @@ GameObject:
   - component: {fileID: 4088570243707704400}
   - component: {fileID: 3029974015549014639}
   - component: {fileID: 1401593833497561526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Front Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -430,9 +430,9 @@ GameObject:
   - component: {fileID: 5583675752388786429}
   - component: {fileID: 2078694420797576982}
   - component: {fileID: 5242706442656982287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -525,9 +525,9 @@ GameObject:
   - component: {fileID: 623394475339129699}
   - component: {fileID: 3381388957307905643}
   - component: {fileID: 6879490376618139578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -620,9 +620,9 @@ GameObject:
   - component: {fileID: 3060653279234608467}
   - component: {fileID: 4278547286646163806}
   - component: {fileID: 3684772661665015417}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
