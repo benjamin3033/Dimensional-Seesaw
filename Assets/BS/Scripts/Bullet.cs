@@ -18,6 +18,10 @@ public class Bullet : MonoBehaviour
             case "Object":
                 Destroy(gameObject);
                 break;
+
+            case "Player":
+                Destroy(gameObject);
+                break;
         }
     }
 

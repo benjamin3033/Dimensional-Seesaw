@@ -58,12 +58,12 @@ public class WeaponShooting : MonoBehaviour
     }
     void ReactToInput()
     {
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Fire1") && !Settings.isPaused)
         {
             FireBullet();
         }
 
-        if(Input.GetButtonUp("WeaponSwitch"))
+        if(Input.GetButtonUp("WeaponSwitch") && !Settings.isPaused)
         {
             isLaserWeapon = !isLaserWeapon;
         }
