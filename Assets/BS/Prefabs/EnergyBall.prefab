@@ -126,3 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 10
+  hitParticle: {fileID: 5723146083215958079, guid: 5ad369ba57e47fe48abc54a245071eec, type: 3}
