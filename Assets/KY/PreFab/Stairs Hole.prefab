@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1338106657568744413}
   - component: {fileID: 2683639049016011896}
   - component: {fileID: 205692473365207218}
-  m_Layer: 0
+  - component: {fileID: 7184674068400054151}
+  m_Layer: 8
   m_Name: Stairs Hole
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5547084792012057669, guid: 8446dcc162055c24794b0bca7eb5974f, type: 3}
+  - {fileID: 2100000, guid: 9ab8064be9bb56643814764faa562183, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7184674068400054151
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862863272412723559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1070913850553931305, guid: 8446dcc162055c24794b0bca7eb5974f, type: 3}

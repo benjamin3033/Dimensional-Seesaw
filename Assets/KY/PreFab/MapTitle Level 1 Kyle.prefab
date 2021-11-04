@@ -295,9 +295,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3244196481889503947}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MapTitle Level 1 Kyle
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
