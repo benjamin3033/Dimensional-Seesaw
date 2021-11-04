@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6616078325808849405}
   - component: {fileID: 6411377397780059076}
   - component: {fileID: 8834274066530061183}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,9 +107,9 @@ GameObject:
   - component: {fileID: 7230067108818288291}
   - component: {fileID: 2495225395981444344}
   - component: {fileID: 5460012094172927266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stairs
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,9 +203,9 @@ GameObject:
   - component: {fileID: 8663635256267491717}
   - component: {fileID: 6499703666213541654}
   - component: {fileID: 5161570264666502228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Back Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,9 +335,9 @@ GameObject:
   - component: {fileID: 521956321819952756}
   - component: {fileID: 1596446241513882233}
   - component: {fileID: 8822338286068922700}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -430,9 +430,9 @@ GameObject:
   - component: {fileID: 6934119490899194842}
   - component: {fileID: 3575509544635800625}
   - component: {fileID: 5518842098723902712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -525,9 +525,9 @@ GameObject:
   - component: {fileID: 1583656877682515831}
   - component: {fileID: 525621684322322760}
   - component: {fileID: 6103692145839013308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Front Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -620,9 +620,9 @@ GameObject:
   - component: {fileID: 2729601987560040516}
   - component: {fileID: 264261177301069132}
   - component: {fileID: 6985299164140583851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 637010994378810612}
   - component: {fileID: 3910082323799108445}
   - component: {fileID: 6877205180394610711}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arch Way
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
