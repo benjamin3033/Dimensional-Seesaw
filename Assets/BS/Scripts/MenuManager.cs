@@ -11,22 +11,18 @@ public class MenuManager : MonoBehaviour
     public Canvas CreditsCanvas = null;
     public Canvas QuitConfirmationCanvas = null;
 
-    public Text FovText = null;
-
-    public Slider fovSlider = null;
-
     bool optionsOn = false;
     bool creditsOn = false;
     bool quitOn = false;
 
     private void Start()
     {
-        fovSlider.onValueChanged.AddListener(delegate { FovValueChangeCheck(); });
+        
     }
 
     private void Update()
     {
-        FovText.text = "" + Settings.cameraFov;
+        
     }
 
     public void StartGame()
@@ -64,11 +60,6 @@ public class MenuManager : MonoBehaviour
             CreditsCanvas.enabled = true;
             creditsOn = true;
         }
-    }
-
-    public void FovValueChangeCheck()
-    {
-        Settings.cameraFov = (int)fovSlider.value;
     }
 
     public void QuitConfirmation()
