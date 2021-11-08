@@ -61,7 +61,7 @@ public class WeaponShooting : MonoBehaviour
     }
     void ReactToInput()
     {
-        if (Input.GetButtonUp("Fire1") && !Settings.isPaused && CanFire)
+        if (Input.GetButton("Fire1") && !Settings.isPaused && CanFire)
         {
             FireBullet();
         }
