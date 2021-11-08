@@ -15,6 +15,7 @@ public class PlayerLook : MonoBehaviour
     {
         Time.timeScale = 0;
         fpsCamera.fieldOfView = Settings.cameraFov;
+        mouseSensitivity = Settings.sensitivity;
     }
 
     // Update is called once per frame

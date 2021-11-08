@@ -6,13 +6,20 @@ public class Bullet : MonoBehaviour
 {
     public float lifeTime = 10f;
     public GameObject hitParticle;
+    EnemyHealth EnemyHealthScript;
+
+    private void Start()
+    {
+        EnemyHealthScript = GetComponent<EnemyHealth>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         switch(collision.gameObject.tag)
         {
             case "Enemy":
-                Destroy(collision.gameObject);
+                EnemyHealthScript.TakeDamage(10);
+                //Destroy(collision.gameObject);
                 Destroy(gameObject);
                 break;
 
