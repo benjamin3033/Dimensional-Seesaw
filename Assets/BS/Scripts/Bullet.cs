@@ -5,14 +5,23 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float lifeTime = 10f;
+    public int Damage = 10;
     public GameObject hitParticle;
+    EnemyHealth EnemyHealthScript;
+
+    private void Start()
+    {
+        
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         switch(collision.gameObject.tag)
         {
             case "Enemy":
-                Destroy(collision.gameObject);
+                EnemyHealthScript = collision.gameObject.GetComponent<EnemyHealth>();
+                EnemyHealthScript.TakeDamage(Damage);
+                //Destroy(collision.gameObject);
                 Destroy(gameObject);
                 break;
 
