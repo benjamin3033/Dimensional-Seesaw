@@ -6,7 +6,9 @@ public class Bullet : MonoBehaviour
 {
     public float lifeTime = 10f;
     public int Damage = 10;
+
     public GameObject hitParticle;
+    ParticleSystem LightningParticle;
     EnemyHealth EnemyHealthScript;
 
     private void Start()
@@ -19,9 +21,10 @@ public class Bullet : MonoBehaviour
         switch(collision.gameObject.tag)
         {
             case "Enemy":
+                LightningParticle = collision.gameObject.GetComponent<ParticleSystem>();
+                LightningParticle.Play();
                 EnemyHealthScript = collision.gameObject.GetComponent<EnemyHealth>();
                 EnemyHealthScript.TakeDamage(Damage);
-                //Destroy(collision.gameObject);
                 Destroy(gameObject);
                 break;
 

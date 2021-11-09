@@ -132,6 +132,7 @@ MonoBehaviour:
   lifeTime: 10
   Damage: 10
   hitParticle: {fileID: 158398040210013124, guid: 1568d318f5669f24fac962d3cadf3615, type: 3}
+  LightningParticle: {fileID: 3403726676734022702, guid: 659d5dd0cefd2e247a0036c3fb71aa35, type: 3}
 --- !u!108 &4487901706295155055
 Light:
   m_ObjectHideFlags: 0

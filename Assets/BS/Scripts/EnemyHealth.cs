@@ -30,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
     public void EnemyHealthPercent()
     {
         EnemyHealthPercentage = (CurrentHP / EnemyHP);
-        Debug.Log(EnemyHealthPercentage);
+        //Debug.Log(EnemyHealthPercentage);
     }
 
     public void UpdateHealthBar()
