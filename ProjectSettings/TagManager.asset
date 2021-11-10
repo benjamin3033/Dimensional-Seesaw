@@ -19,8 +19,8 @@ TagManager:
   - Ground
   - Gun Layer
   - PostProcessing
-  - 
-  - 
+  - Player
+  - DontCollideWithPlayer
   - 
   - 
   - 

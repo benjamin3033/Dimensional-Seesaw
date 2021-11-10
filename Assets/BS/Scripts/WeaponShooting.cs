@@ -112,7 +112,7 @@ public class WeaponShooting : MonoBehaviour
     {
         CanFire = false;
         GameObject clone = Instantiate(bullet, barrel.transform.position, barrel.transform.rotation);
-        clone.GetComponent<Rigidbody>().AddForce(barrel.transform.forward * bulletSpeed);
+        clone.GetComponent<Rigidbody>().AddForce(barrel.transform.up * bulletSpeed);
     }
 
     void WeaponKickBack()

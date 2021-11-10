@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8024381130198491499}
   - component: {fileID: 3000035335939610457}
   - component: {fileID: 3578245396287052753}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EnergyBall
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5476702562199462452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.342, y: 1.0688, z: -0.3935}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.09999543, y: 0.09999543, z: 0.09999543}
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,10 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2942c7612beefd489ee6f14174c81e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 10
+  lifeTime: 5
   Damage: 10
   hitParticle: {fileID: 158398040210013124, guid: 1568d318f5669f24fac962d3cadf3615, type: 3}
-  LightningParticle: {fileID: 3403726676734022702, guid: 659d5dd0cefd2e247a0036c3fb71aa35, type: 3}
 --- !u!108 &4487901706295155055
 Light:
   m_ObjectHideFlags: 0

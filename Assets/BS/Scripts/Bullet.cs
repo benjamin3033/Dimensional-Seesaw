@@ -11,6 +11,9 @@ public class Bullet : MonoBehaviour
     ParticleSystem LightningParticle;
     EnemyHealth EnemyHealthScript;
 
+    Rigidbody m_Rigidbody;
+    Collider m_Collider;
+
     private void Start()
     {
         
@@ -21,16 +24,38 @@ public class Bullet : MonoBehaviour
         switch(collision.gameObject.tag)
         {
             case "Enemy":
-                LightningParticle = collision.gameObject.GetComponent<ParticleSystem>();
-                LightningParticle.Play();
+                if(gameObject.name.Contains("Arrow"))
+                {
+                    Instantiate(hitParticle, transform.position, Quaternion.identity);
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    LightningParticle = collision.gameObject.GetComponent<ParticleSystem>();
+                    LightningParticle.Play();
+                    Destroy(gameObject);
+                }
+
                 EnemyHealthScript = collision.gameObject.GetComponent<EnemyHealth>();
                 EnemyHealthScript.TakeDamage(Damage);
-                Destroy(gameObject);
                 break;
 
             case "Object":
-                Instantiate(hitParticle, transform.position, Quaternion.identity);
-                Destroy(gameObject);
+                if(gameObject.name.Contains("Arrow"))
+                {
+                    Instantiate(hitParticle, transform.position, Quaternion.identity);
+                    lifeTime = 100f;
+                    m_Rigidbody = gameObject.GetComponent<Rigidbody>();
+                    m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+                    //m_Collider = gameObject.GetComponent<Collider>();
+                    //m_Collider.enabled = false;
+                    gameObject.transform.Translate(Vector3.up * 0.1f);
+                }
+                else
+                {
+                    Instantiate(hitParticle, transform.position, Quaternion.identity);
+                    Destroy(gameObject);
+                }
                 break;
         }
     }
