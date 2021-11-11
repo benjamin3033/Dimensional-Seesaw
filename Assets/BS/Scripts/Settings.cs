@@ -7,6 +7,9 @@ public class Settings : MonoBehaviour
     // Settings
     public static int cameraFov = 60;
     public static int sensitivity = 200;
+    public static bool WeaponBob = true;
+    public static bool CameraBob = true;
+
 
     public static bool isPaused = false;
 }
