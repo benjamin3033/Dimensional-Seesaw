@@ -210,6 +210,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6019974003830294163}
     m_Modifications:
+    - target: {fileID: 1652784949999524, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878652760548056, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911683160194432, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4521404770085940, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.42
@@ -246,13 +258,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 198168859160489886, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 198205007009897148, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 198205007009897148, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 198260517930635872, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198260517930635872, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 198321560017527566, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
