@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
   m_Name: AmbientOcclusion
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -115,7 +115,7 @@ MonoBehaviour:
     value: 0
   intensity:
     overrideState: 1
-    value: 2.48
+    value: 0.2
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a34fa72bd4185749832024e9c8010bf, type: 3}
   m_Name: ScreenSpaceReflections
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -236,7 +236,7 @@ MonoBehaviour:
     value: 3
   toneCurveToeStrength:
     overrideState: 1
-    value: 0.643
+    value: 0.221
   toneCurveToeLength:
     overrideState: 1
     value: 0.535
@@ -311,13 +311,13 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   lift:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0.9544815, y: 0.85084754, z: 1, w: 0}
   gamma:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0.9742191, y: 0.8701937, z: 1, w: 0}
   gain:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0.5872754, y: 1, z: 0.65811247, w: 0}
   masterCurve:
     overrideState: 0
