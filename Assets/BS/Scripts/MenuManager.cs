@@ -15,16 +15,6 @@ public class MenuManager : MonoBehaviour
     bool creditsOn = false;
     bool quitOn = false;
 
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        
-    }
-
     public void StartGame()
     {
         SceneManager.LoadScene(1);

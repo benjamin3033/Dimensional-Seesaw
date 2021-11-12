@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -13,43 +14,36 @@ public class OptionsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
-    string ResToString(Resolution res)
-    {
-        return res.width + " x " + res.height;
-    }
-
     private void Start()
     {
         sensitivityText.text = "" + (int)sensitivitySlider.value;
-
         FullscreenDropdown.onValueChanged.AddListener(delegate { FullscreenDropdownValueChanged(FullscreenDropdown); });
-        
+        ResolutionDropdown.onValueChanged.AddListener(delegate { ResolutionDropdownValueChanged(ResolutionDropdown); });
 
         SetupResolutions();
     }
 
+
     private void SetupResolutions()
     {
         resolutions = Screen.resolutions;
-        ResolutionDropdown.onValueChanged.AddListener(delegate { Screen.SetResolution(resolutions[ResolutionDropdown.value].width, resolutions[ResolutionDropdown.value].height, false); });
+        ResolutionDropdown.ClearOptions();
+        List<string> options = new List<string>();
 
+        int currentResolutionIndex = 0;
         for (int i = 0; i < resolutions.Length; i++)
         {
-            ResolutionDropdown.options[i].text = ResToString(resolutions[i]);
-            ResolutionDropdown.value = i;
-            if(i < resolutions.Length-1)
+            string option = resolutions[i].width + " x " + resolutions[i].height + " @ " + resolutions[i].refreshRate + "hz";
+            options.Add(option);
+            if (resolutions[i].width == Screen.width && resolutions[i].height == Screen.height)
             {
-                ResolutionDropdown.options.Add(new Dropdown.OptionData(ResolutionDropdown.options[i].text));
+                currentResolutionIndex = i;
             }
         }
 
-        
-    }
-
-    public void SetResolution(int resolutionIndex)
-    {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreenMode = FullScreenMode.Windowed);
+        ResolutionDropdown.AddOptions(options);
+        ResolutionDropdown.value = currentResolutionIndex;
+        ResolutionDropdown.RefreshShownValue();
     }
 
     void FullscreenDropdownValueChanged(Dropdown change)
@@ -76,7 +70,8 @@ public class OptionsMenu : MonoBehaviour
 
     void ResolutionDropdownValueChanged(Dropdown change)
     {
-        SetResolution(change.value);
+        Resolution resolution = resolutions[change.value];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
     public void ChangeSensitivity()
