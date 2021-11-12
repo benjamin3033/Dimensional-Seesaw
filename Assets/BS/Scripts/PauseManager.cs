@@ -7,33 +7,38 @@ public class PauseManager : MonoBehaviour
 {
     public Canvas pauseMenu = null;
 
-    bool isPaused = false;
-
     private void Update()
     {
+        Debug.Log(Settings.isPaused);
+        Debug.Log(Time.timeScale);
+
         if(Input.GetButtonUp("Cancel"))
         {
             RunPauseMenu();
         }
     }
 
+    private void Start()
+    {
+        ResumeGame();
+    }
+
+    public void ResumeGame()
+    {
+        pauseMenu.enabled = false;
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Settings.isPaused = false;
+    }
+
     void RunPauseMenu()
     {
-        if (isPaused)
-        {
-            pauseMenu.enabled = false;
-            Time.timeScale = 1;
-            Cursor.lockState = CursorLockMode.Locked;
-            Settings.isPaused = false;
-            isPaused = false;
-        }
-        else
+        if (!Settings.isPaused)
         {
             pauseMenu.enabled = true;
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             Settings.isPaused = true;
-            isPaused = true;
         }
     }
 }

@@ -10,6 +10,6 @@ public class Settings : MonoBehaviour
     public static bool WeaponBob = true;
     public static bool CameraBob = true;
 
-
+    // Public Variables
     public static bool isPaused = false;
 }
