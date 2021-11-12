@@ -12,12 +12,6 @@ public class Bullet : MonoBehaviour
     EnemyHealth EnemyHealthScript;
 
     Rigidbody m_Rigidbody;
-    Collider m_Collider;
-
-    private void Start()
-    {
-        
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -47,8 +41,6 @@ public class Bullet : MonoBehaviour
                     lifeTime = 100f;
                     m_Rigidbody = gameObject.GetComponent<Rigidbody>();
                     m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-                    //m_Collider = gameObject.GetComponent<Collider>();
-                    //m_Collider.enabled = false;
                     gameObject.transform.Translate(Vector3.up * 0.1f);
                 }
                 else
