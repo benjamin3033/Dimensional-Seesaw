@@ -42,6 +42,5 @@ public class EnemyHealth : MonoBehaviour
     {
         CurrentHP -= amount;
         UpdateHealthBar();
-        Debug.Log(CurrentHP);
     }
 }

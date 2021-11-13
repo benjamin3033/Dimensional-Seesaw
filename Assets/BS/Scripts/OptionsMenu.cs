@@ -23,7 +23,6 @@ public class OptionsMenu : MonoBehaviour
         SetupResolutions();
     }
 
-
     private void SetupResolutions()
     {
         resolutions = Screen.resolutions;
@@ -77,6 +76,6 @@ public class OptionsMenu : MonoBehaviour
     public void ChangeSensitivity()
     {
         sensitivityText.text = "" + (int)sensitivitySlider.value;
-        Settings.sensitivity = (int)sensitivitySlider.value * 100;
+        Settings.sensitivity = sensitivitySlider.value / 100;
     }
 }
