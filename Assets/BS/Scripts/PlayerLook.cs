@@ -1,33 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerLook : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
-    public Transform cameraTransform;
-    public Camera fpsCamera = null;
+#pragma warning disable 649
 
+    public Camera fpsCamera = null;
+    public Transform playerCamera;
+
+    float mouseX, mouseY;
     float xRotation = 0f;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         fpsCamera.fieldOfView = Settings.cameraFov;
-        mouseSensitivity = Settings.sensitivity;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        if(Settings.isPaused)
+        {
+            mouseX = 0;
+            mouseY = 0;
+        }
+
+        transform.Rotate(Vector3.up, mouseX);
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        Vector3 targetRotation = transform.eulerAngles;
+        targetRotation.x = xRotation;
+        playerCamera.eulerAngles = targetRotation;
+    }
 
-        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-
-        transform.Rotate(Vector3.up * mouseX);
+    public void ReceiveInput(Vector2 mouseInput)
+    {
+        mouseX = mouseInput.x * Settings.sensitivity;
+        mouseY = mouseInput.y * Settings.sensitivity;
     }
 }
