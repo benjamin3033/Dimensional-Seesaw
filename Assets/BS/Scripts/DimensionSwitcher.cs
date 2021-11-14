@@ -8,13 +8,36 @@ public class DimensionSwitcher : MonoBehaviour
     public PlayerMovement movementScript = null;
     public CharacterController charCont = null;
 
+    float playerSwitching = 0;
+    public float TimeBetweenSwitching = 1f;
+    float switchingTimer;
+    bool canSwitch = false;
+
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonUp("DimensionSwitch") && !Settings.isPaused)
+        if(playerSwitching > 0.1 && !Settings.isPaused && canSwitch)
         {
             SwitchDim();
-        }    
+            canSwitch = false;
+        }
+        else if (!canSwitch)
+        {
+            if (switchingTimer > 0)
+            {
+                switchingTimer -= Time.deltaTime;
+            }
+            else
+            {
+                switchingTimer = TimeBetweenSwitching;
+                canSwitch = true;
+            }
+        }
+    }
+
+    public void RecieveSwitchInput(float isSwitching)
+    {
+        playerSwitching = isSwitching;
     }
 
     void SwitchDim()

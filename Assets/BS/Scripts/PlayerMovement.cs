@@ -1,53 +1,63 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    CharacterController contoller;
+#pragma warning disable 649
 
-    public float speed = 12f;
-    public float gravity = -9.81f;
-    public float jumpHeight = 3;
+    [SerializeField] CharacterController controller;
+    [SerializeField] float speed = 11f;
 
-    public Transform groundCheck;
+    Vector2 horizontalInput;
+
+    [SerializeField] float gravity = -30f;
+    Vector3 verticalVelocity = Vector3.zero;
+
+    [SerializeField] float jumpHeight = 3.5f;
+    bool jump;
+    
+    [SerializeField] LayerMask groundMask;
     public float groundDistance = 0.4f;
-    public LayerMask groundMask;
-
-    public Vector3 move;
-    Vector3 velocity;
+    public Transform groundCheck;
     bool isGrounded;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        contoller = GetComponent<CharacterController>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(isGrounded && velocity.y < 0)
+        if (isGrounded)
         {
-            velocity.y = -2f;
+            verticalVelocity.y = 0;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        Vector3 horizontalVelocity = (transform.right * horizontalInput.x + transform.forward * horizontalInput.y) * speed;
+        controller.Move(horizontalVelocity * Time.deltaTime);
 
-        move = transform.right * x + transform.forward * z;
-
-        contoller.Move(move * speed * Time.deltaTime);
-
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if(jump)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+            if(isGrounded)
+            {
+                verticalVelocity.y = Mathf.Sqrt(-2f * jumpHeight * gravity);
+            }
+            jump = false;
         }
 
-        velocity.y += gravity * Time.deltaTime;
-
-        contoller.Move(velocity * Time.deltaTime);
+        verticalVelocity.y += gravity * Time.deltaTime;
+        controller.Move(verticalVelocity * Time.deltaTime);
     }
+
+    public void RecieveInput(Vector2 _horizontalInput)
+    {
+        horizontalInput = _horizontalInput;
+    }
+
+    public void OnJumpPressed()
+    {
+        jump = true;
+    }
+
 }

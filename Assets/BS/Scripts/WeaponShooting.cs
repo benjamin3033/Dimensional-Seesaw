@@ -29,6 +29,8 @@ public class WeaponShooting : MonoBehaviour
     public float boltSpeed = 500;
     public float boltDelay = 1f;
 
+    public float WeaponSwitchSpeed = 1f;
+
     // Private Variables
     GameObject bullet;
     GameObject CurrentGun;
@@ -36,8 +38,12 @@ public class WeaponShooting : MonoBehaviour
     float bulletSpeed = 0f;
     bool isLaserWeapon = false;
     bool CanFire = true;
+    bool canSwitch = false;
     float ChosenTimer;
-    float timer;
+    float shootingTimer;
+    float switchingTimer;
+    float playerShooting = 0;
+    float playerSwitching = 0;
     
 
     // Start is called before the first frame update
@@ -82,29 +88,52 @@ public class WeaponShooting : MonoBehaviour
         }
     }
 
+    public void RecieveShootingInput(float isShooting)
+    {
+        playerShooting = isShooting;
+    }
+
+    public void RecieveSwitchInput(float isSwitching)
+    {
+        playerSwitching = isSwitching;
+    }
+
     void ReactToInput()
     {
-        if (Input.GetButton("Fire1") && !Settings.isPaused && CanFire)
+        if (playerShooting > 0.1 && !Settings.isPaused && CanFire)
         {
             FireBullet();
             WeaponKickBack();
         }
         else if (!CanFire)
         {
-            if (timer > 0)
+            if (shootingTimer > 0)
             {
-                timer -= Time.deltaTime;
+                shootingTimer -= Time.deltaTime;
             }
             else
             {
-                timer = ChosenTimer;
+                shootingTimer = ChosenTimer;
                 CanFire = true;
             }
         }
 
-        if (Input.GetButtonUp("WeaponSwitch") && !Settings.isPaused)
+        if (playerSwitching > 0.1 && !Settings.isPaused && canSwitch)
         {
             isLaserWeapon = !isLaserWeapon;
+            canSwitch = false;
+        }
+        else if(!canSwitch)
+        {
+            if(switchingTimer > 0)
+            {
+                switchingTimer -= Time.deltaTime;
+            }
+            else
+            {
+                switchingTimer = WeaponSwitchSpeed;
+                canSwitch = true;
+            }
         }
     }
 
