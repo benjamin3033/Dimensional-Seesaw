@@ -77,7 +77,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.9921741, b: 0.6556604, a: 1}
   m_Intensity: 1
-  m_Range: 20
+  m_Range: 28
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -216,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1878652760548056, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1911683160194432, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
       propertyPath: m_IsActive
@@ -258,13 +258,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4845561253834940, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845561253834940, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.114
+      objectReference: {fileID: 0}
     - target: {fileID: 198168859160489886, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 198205007009897148, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 0.7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 198205007009897148, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar

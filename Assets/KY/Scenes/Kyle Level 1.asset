@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   intensity:
     overrideState: 1
-    value: 4.15
+    value: 21.17
   threshold:
     overrideState: 1
     value: 1
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a34fa72bd4185749832024e9c8010bf, type: 3}
   m_Name: ScreenSpaceReflections
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -236,7 +236,7 @@ MonoBehaviour:
     value: 3
   toneCurveToeStrength:
     overrideState: 1
-    value: 0.447
+    value: 0.477
   toneCurveToeLength:
     overrideState: 1
     value: 0.535
@@ -293,8 +293,8 @@ MonoBehaviour:
     overrideState: 1
     value: 106
   mixerGreenOutRedIn:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 27
   mixerGreenOutGreenIn:
     overrideState: 0
     value: 100
@@ -311,13 +311,13 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   lift:
-    overrideState: 0
-    value: {x: 0.94666266, y: 1, z: 0.8788882, w: 0}
+    overrideState: 1
+    value: {x: 0.972087, y: 0.9226899, z: 1, w: 0}
   gamma:
-    overrideState: 0
-    value: {x: 0.9742191, y: 0.8701937, z: 1, w: 0}
+    overrideState: 1
+    value: {x: 0.9810938, y: 0.8255956, z: 1, w: 0}
   gain:
-    overrideState: 0
+    overrideState: 1
     value: {x: 0.5872754, y: 1, z: 0.65811247, w: 0}
   masterCurve:
     overrideState: 0
