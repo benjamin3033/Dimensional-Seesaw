@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int EnemyHP = 1000;
-    
-    float EnemyHealthPercentage;
-    int CurrentHP;
+    public float EnemyHP = 1000;
+    public RectTransform HealthPanel = null;
+
+    float CurrentHP;
 
     // Start is called before the first frame update
     void Start()
@@ -16,31 +16,13 @@ public class EnemyHealth : MonoBehaviour
         CurrentHP = EnemyHP;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(CurrentHP <= 0)
-        {
-            Destroy(gameObject);
-        }
-
-        EnemyHealthPercent();
-    }
-
-    public void EnemyHealthPercent()
-    {
-        EnemyHealthPercentage = (CurrentHP / EnemyHP);
-        //Debug.Log(EnemyHealthPercentage);
-    }
-
-    public void UpdateHealthBar()
-    {
-
-    }
-
     public void TakeDamage(int amount)
     {
         CurrentHP -= amount;
-        UpdateHealthBar();
+        HealthPanel.anchorMax = new Vector2(CurrentHP / EnemyHP, 1);
+        if (CurrentHP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
