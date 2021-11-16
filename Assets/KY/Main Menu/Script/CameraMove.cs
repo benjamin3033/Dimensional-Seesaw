@@ -39,4 +39,8 @@ public class CameraMove : MonoBehaviour
     {
         MedtoOp.Play();
     }
+    public void PlayOptoMed()
+    {
+        OptoMed.Play();
+    }
 }
