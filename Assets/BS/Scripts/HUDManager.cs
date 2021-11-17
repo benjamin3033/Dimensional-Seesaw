@@ -1,15 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
 {
-    public Canvas HowTo = null;
+    public Text PlayerHealthText = null;
+    public GameObject PlayerController = null;
 
-    public void CloseHowTo()
+    int playerHealth;
+
+    private void Update()
     {
-        HowTo.gameObject.SetActive(false);
-        Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
+        UpdatePlayerHealth();
+    }
+
+    void UpdatePlayerHealth()
+    {
+        playerHealth = PlayerController.GetComponent<PlayerHealth>().Health;
+        PlayerHealthText.text = "Health: " + playerHealth;
     }
 }
