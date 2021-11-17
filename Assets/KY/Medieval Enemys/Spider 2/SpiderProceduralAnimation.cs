@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiderProceduralAnimation : MonoBehaviour;
+public class SpiderProceduralAnimation : MonoBehaviour
 {
     public Transform[] legTargets;
     public float stepSize = 1f;
