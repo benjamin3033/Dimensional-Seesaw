@@ -46,6 +46,7 @@ public class RoomControl : MonoBehaviour
             for (int i = Enemies.Count - 1; i >= 0; i--)
             {
                 Enemies[i].GetComponent<AIController>().CanAttack = true;
+                Enemies[i].GetComponent<TurretShooting>().PlayerInRoom = true;
             }
         }
         else if(other.tag == "Enemy")
