@@ -161,10 +161,20 @@ MonoBehaviour:
   - {fileID: 1059509984}
   - {fileID: 1237638783}
   - {fileID: 1922582975}
-  stepSize: 1
-  smoothness: 232
-  stepHeight: 0.1
+  stepSize: 0.15
+  smoothness: 8
+  stepHeight: 0.15
   bodyOrientation: 0
+  raycastRange: 1
+  defaultLegPositions: []
+  lastLegPositions: []
+  lastBodyUp: {x: 0, y: 0, z: 0}
+  legMoving: []
+  nbLegs: 0
+  velocity: {x: 0, y: 0, z: 0}
+  lastVelocity: {x: 0, y: 0, z: 0}
+  lastBodyPos: {x: 0, y: 0, z: 0}
+  velocityMultiplier: 15
 --- !u!4 &54233471
 Transform:
   m_ObjectHideFlags: 0
