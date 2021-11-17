@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] CharacterController controller;
     [SerializeField] float speed = 11f;
 
-    Vector2 horizontalInput;
+    public Vector2 horizontalInput;
 
     [SerializeField] float gravity = -30f;
     Vector3 verticalVelocity = Vector3.zero;

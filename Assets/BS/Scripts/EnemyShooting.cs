@@ -10,6 +10,7 @@ public class EnemyShooting : MonoBehaviour
     public float ProjectileSpeed = 1f;
     public float ProjectileRate = 1f;
 
+    public bool PlayerInRoom = false;
     bool canShoot = true;
     float shootingTimer = 0;
 
@@ -17,12 +18,13 @@ public class EnemyShooting : MonoBehaviour
     void Start()
     {
         shootingTimer = ProjectileRate;
+        gameObject.GetComponent<AIController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(canShoot)
+        if(canShoot && gameObject.GetComponent<AIController>().CanAttack)
         {
             GameObject clone = Instantiate(projectile, ShotStart.transform.position, ShotStart.transform.rotation);
             clone.GetComponent<Rigidbody>().AddForce(ShotStart.transform.forward * ProjectileSpeed);

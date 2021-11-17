@@ -9,11 +9,19 @@ public class WeaponBob : MonoBehaviour
     public float bobbingAmount = 0.2f;
     public float midpoint = -0.148f;
 
+    [SerializeField] GameObject PlayerControler = null;
+    PlayerMovement playerMovement;
+
+    private void Awake()
+    {
+        playerMovement = PlayerControler.GetComponent<PlayerMovement>();
+    }
+
     void Update()
     {
         float waveslice = 0.0f;
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = playerMovement.horizontalInput.x;
+        float vertical = playerMovement.horizontalInput.y;
 
         Vector3 cSharpConversion = transform.localPosition;
 
