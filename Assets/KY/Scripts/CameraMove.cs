@@ -14,6 +14,12 @@ public class CameraMove : MonoBehaviour
     public PlayableDirector OptoMed;
     public PlayableDirector MedtoCred;
     public PlayableDirector CredtoMed;
+    public PlayableDirector MedControlstoGame;
+    public PlayableDirector MedGameToControls;
+    public PlayableDirector MedGameToVideo;
+    public PlayableDirector MedVideoToGame;
+    public PlayableDirector MedCreditToMainMenu;
+    public PlayableDirector MedMainMenuToCredit;
 
     public void PlayMedevalCut()
     {
@@ -42,5 +48,35 @@ public class CameraMove : MonoBehaviour
     public void PlayOptoMed()
     {
         OptoMed.Play();
+    }
+
+    public void PlayMedControltoGame()
+    {
+        MedControlstoGame.Play();
+    }
+
+    public void PlayMedGameToControl()
+    {
+        MedGameToControls.Play();
+    }
+
+    public void PlayMedGameToVideo()
+    {
+        MedGameToVideo.Play();
+    }
+
+    public void PlayMedVideoToGame()
+    {
+        MedVideoToGame.Play();
+    }
+       
+    public void PlayMedCreditToMainMenu()
+    {
+        MedCreditToMainMenu.Play();
+    }
+
+    public void PlayMedMainToCredit()
+    {
+        MedMainMenuToCredit.Play();
     }
 }
