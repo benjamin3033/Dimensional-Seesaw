@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 3cbf1ce3a362be44f81870cbdc44ffa8
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -1079851820895352890
+    second: Spider|SpiderAction
   externalObjects: {}
   materials:
     materialImportMode: 1
