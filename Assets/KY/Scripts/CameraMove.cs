@@ -21,6 +21,8 @@ public class CameraMove : MonoBehaviour
     public PlayableDirector MedCreditToMainMenu;
     public PlayableDirector MedMainMenuToCredit;
 
+    public PlayableDirector SciMainMenutoOptions;
+
     public void PlayMedevalCut()
     {
         MedevalStartCut.Play();
@@ -79,4 +81,9 @@ public class CameraMove : MonoBehaviour
     {
         MedMainMenuToCredit.Play();
     }
+
+    public void PlaySciFiMenutooptions()
+    {
+        SciMainMenutoOptions.Play();
+    }    
 }
