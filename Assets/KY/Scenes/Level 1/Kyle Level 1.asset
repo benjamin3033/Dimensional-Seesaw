@@ -53,7 +53,7 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 31
+    value: 35
   tint:
     overrideState: 0
     value: 0
@@ -70,8 +70,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   postExposure:
-    overrideState: 1
-    value: 0.7
+    overrideState: 0
+    value: 0
   contrast:
     overrideState: 0
     value: 0
@@ -103,8 +103,8 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   lift:
-    overrideState: 1
-    value: {x: 0.99937373, y: 1, z: 0.85266304, w: 0}
+    overrideState: 0
+    value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
     overrideState: 0
     value: {x: 1, y: 1, z: 1, w: -1}
@@ -1329,7 +1329,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 31.88
+    value: 1
   threshold:
     overrideState: 1
     value: 1
@@ -1350,7 +1350,7 @@ MonoBehaviour:
     value: {r: 1, g: 1, b: 1, a: 1}
   fastMode:
     overrideState: 1
-    value: 1
+    value: 0
   dirtTexture:
     overrideState: 0
     value: {fileID: 0}
@@ -1370,7 +1370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
   m_Name: AmbientOcclusion
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1

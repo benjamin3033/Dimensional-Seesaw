@@ -162,9 +162,9 @@ MonoBehaviour:
   - {fileID: 1059509984}
   - {fileID: 1237638783}
   - {fileID: 1922582975}
-  stepSize: 2.36
-  smoothness: 24
-  stepHeight: 1.89
+  stepSize: 0.15
+  smoothness: 8
+  stepHeight: 0.15
   bodyOrientation: 0
 --- !u!4 &54233471
 Transform:
