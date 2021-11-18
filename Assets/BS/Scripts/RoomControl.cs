@@ -9,6 +9,9 @@ public class RoomControl : MonoBehaviour
 
     bool EnemiesDead = false;
 
+    public bool isFloatingHeadRoom;
+    public bool isTurretRoom;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,10 @@ public class RoomControl : MonoBehaviour
     {
         if(Enemies.Count <= 0 && !EnemiesDead)
         {
-            Destroy(Exit);
+            if (Exit != null)
+            {
+                Destroy(Exit);
+            }
             EnemiesDead = true;
         }
         else
@@ -33,21 +39,33 @@ public class RoomControl : MonoBehaviour
                 }
             }
         }
-
-        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            Entry.SetActive(true);
-
-            for (int i = Enemies.Count - 1; i >= 0; i--)
+            if(Entry != null)
             {
-                Enemies[i].GetComponent<AIController>().CanAttack = true;
-                Enemies[i].GetComponent<TurretShooting>().PlayerInRoom = true;
+                Entry.SetActive(true);
             }
+            
+
+            if(isFloatingHeadRoom)
+            {
+                for (int i = Enemies.Count - 1; i >= 0; i--)
+                {
+                    Enemies[i].GetComponent<AIController>().CanAttack = true;
+                }
+            }
+            else if(isTurretRoom)
+            {
+                for (int i = Enemies.Count - 1; i >= 0; i--)
+                {
+                    Enemies[i].GetComponent<TurretShooting>().PlayerInRoom = true;
+                }
+            }
+            
         }
         else if(other.tag == "Enemy")
         {
@@ -59,7 +77,20 @@ public class RoomControl : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            
+            if (isFloatingHeadRoom)
+            {
+                for (int i = Enemies.Count - 1; i >= 0; i--)
+                {
+                    Enemies[i].GetComponent<AIController>().CanAttack = false;
+                }
+            }
+            else if (isTurretRoom)
+            {
+                for (int i = Enemies.Count - 1; i >= 0; i--)
+                {
+                    Enemies[i].GetComponent<TurretShooting>().PlayerInRoom = false;
+                }
+            }
         }
     }
 }
