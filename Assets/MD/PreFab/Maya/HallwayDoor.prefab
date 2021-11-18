@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 893483535363323346}
   - component: {fileID: 4308134084778048119}
   - component: {fileID: 2030391526800117437}
+  - component: {fileID: 3843420769109765195}
   m_Layer: 0
   m_Name: HallwayDoor
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3843420769109765195
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517239021211873128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99603105, y: 0.8151933, z: 0.08955521}
+  m_Center: {x: 0.000000014901163, y: -0.000000059604645, z: 0.0000019222498}

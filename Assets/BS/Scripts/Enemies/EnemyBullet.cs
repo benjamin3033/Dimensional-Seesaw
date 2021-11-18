@@ -14,7 +14,6 @@ public class EnemyBullet : MonoBehaviour
         switch(collision.gameObject.tag)
         {
             case "Player":
-                Debug.Log("Enemy Bullet Hit Player");
                 playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
                 playerHealth.TakeDamage(Damage);
                 Destroy(gameObject);

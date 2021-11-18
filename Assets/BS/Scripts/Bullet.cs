@@ -26,7 +26,11 @@ public class Bullet : MonoBehaviour
                 else
                 {
                     LightningParticle = collision.gameObject.GetComponent<ParticleSystem>();
-                    LightningParticle.Play();
+                    if(LightningParticle != null)
+                    {
+                        LightningParticle.Play();
+                    }
+                    
                     Destroy(gameObject);
                 }
 
