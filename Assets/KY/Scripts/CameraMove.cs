@@ -22,6 +22,15 @@ public class CameraMove : MonoBehaviour
     public PlayableDirector MedMainMenuToCredit;
 
     public PlayableDirector SciMainMenutoOptions;
+    public PlayableDirector SciOptionsToMenu;
+    public PlayableDirector SciGametoVA;
+    public PlayableDirector SciVAtoGame;
+    public PlayableDirector SciGametoControls;
+    public PlayableDirector SciControlstoGame;
+    public PlayableDirector SciMenutoCredits;
+    public PlayableDirector SciCreditstoMenu;
+
+
 
     public void PlayMedevalCut()
     {
@@ -86,4 +95,41 @@ public class CameraMove : MonoBehaviour
     {
         SciMainMenutoOptions.Play();
     }    
+    
+    public void PlaySciFiOptionsToMenu()
+    {
+        SciOptionsToMenu.Play();
+    }
+    
+    public void PlaySciGametoVA()
+    {
+        SciGametoVA.Play();
+    }
+
+
+    public void PlaySciVAtoGame()
+    {
+        SciVAtoGame.Play();
+    }
+
+    public void PlaySciGametoControls()
+    {
+        SciGametoControls.Play();
+    }
+    
+    public void PlaySciControlstoGame()
+    {
+        SciControlstoGame.Play();
+    }
+
+    public void PlaySciMenutoCredits()
+    {
+        SciMenutoCredits.Play();
+    }
+    
+    public void PlaySciCreditstoMenu()
+    {
+        SciCreditstoMenu.Play();
+    }
+
 }
