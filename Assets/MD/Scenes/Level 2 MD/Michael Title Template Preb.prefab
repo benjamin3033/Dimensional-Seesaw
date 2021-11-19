@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 229806808465200173}
   m_Layer: 0
   m_Name: Left Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1220410128149297117}
   m_Layer: 0
   m_Name: Right Wall Side Stairs 1
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 2670880719786807252}
   m_Layer: 0
   m_Name: Front Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 4696278973107880736}
   m_Layer: 0
   m_Name: Back Wall Side Stairs 1
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 6635882058647042770}
   m_Layer: 0
   m_Name: Right Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -570,9 +570,9 @@ GameObject:
   - component: {fileID: 5137682858104026850}
   - component: {fileID: 6337391140744859249}
   - component: {fileID: 3005963248590419222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stairs 4
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 5892683926870279316}
   m_Layer: 0
   m_Name: Roof
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -844,7 +844,7 @@ GameObject:
   - component: {fileID: 3755817035985977961}
   m_Layer: 0
   m_Name: Left Wall Side Stairs 1
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -938,9 +938,9 @@ GameObject:
   - component: {fileID: 8159599838120037174}
   - component: {fileID: 2189991604364053893}
   - component: {fileID: 5794159955553486275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stairs 1
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1117,7 +1117,7 @@ GameObject:
   - component: {fileID: 7560857467419412325}
   m_Layer: 0
   m_Name: Back Wall Side Stairs 2
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1270,7 +1270,7 @@ GameObject:
   - component: {fileID: 6520727692424259877}
   m_Layer: 0
   m_Name: Front Wall Side Stairs 1
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1447,7 +1447,7 @@ GameObject:
   - component: {fileID: 5869491369604834460}
   m_Layer: 0
   m_Name: Left Wall Side Stairs 2
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1543,7 +1543,7 @@ GameObject:
   - component: {fileID: 5164924061379686652}
   m_Layer: 0
   m_Name: Right Wall Side Stairs 2
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1637,9 +1637,9 @@ GameObject:
   - component: {fileID: 3172576042113986168}
   - component: {fileID: 8932863559915051211}
   - component: {fileID: 8834413368840579015}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stairs 2
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1735,7 +1735,7 @@ GameObject:
   - component: {fileID: 2368062211363821006}
   m_Layer: 8
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1828,9 +1828,9 @@ GameObject:
   - component: {fileID: 3727941042813065998}
   - component: {fileID: 4783038623145825340}
   - component: {fileID: 8993815426918878518}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stairs 3
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1926,7 +1926,7 @@ GameObject:
   - component: {fileID: 8843312402449794874}
   m_Layer: 0
   m_Name: Front Wall Side Stairs 2
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2022,7 +2022,7 @@ GameObject:
   - component: {fileID: 7287432755697765691}
   m_Layer: 0
   m_Name: Back Wall
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
