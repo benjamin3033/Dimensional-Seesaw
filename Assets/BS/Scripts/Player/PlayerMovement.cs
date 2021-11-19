@@ -23,6 +23,11 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     bool isGrounded;
 
+    private void Start()
+    {
+        Settings.isPaused = false;
+    }
+
     private void Update()
     {
 
