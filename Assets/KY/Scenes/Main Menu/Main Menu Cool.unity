@@ -11165,7 +11165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &974581972
 GameObject:
@@ -12826,6 +12826,46 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7925129615543762506, guid: 72acf9b7e06177e42ae11a475ae0858d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2131349238}
+    - target: {fileID: 7925129615543762506, guid: 72acf9b7e06177e42ae11a475ae0858d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CameraMove, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7925129615543762506, guid: 72acf9b7e06177e42ae11a475ae0858d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySciCreditstoMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7925129615543762506, guid: 72acf9b7e06177e42ae11a475ae0858d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7925129615543762506, guid: 72acf9b7e06177e42ae11a475ae0858d, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7925129615543762506, guid: 72acf9b7e06177e42ae11a475ae0858d, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 7925129615543762506, guid: 72acf9b7e06177e42ae11a475ae0858d, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7925129615543762506, guid: 72acf9b7e06177e42ae11a475ae0858d, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7925129615543762506, guid: 72acf9b7e06177e42ae11a475ae0858d, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 7925129615543762506, guid: 72acf9b7e06177e42ae11a475ae0858d, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8557034623224054757, guid: 72acf9b7e06177e42ae11a475ae0858d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13073,9 +13113,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: Quit
+      - m_Target: {fileID: 2131349238}
+        m_TargetAssemblyTypeName: CameraMove, Assembly-CSharp
+        m_MethodName: PlaySciMenutoCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17404,7 +17444,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 2da6336182ff62e42baca6a53eade1df, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -22309,6 +22349,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 18701526095118828, guid: f4889c0ecdd9e5b4eb64f24e39fa61c2, type: 3}
   m_PrefabInstance: {fileID: 1963197057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1966803701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966803703}
+  - component: {fileID: 1966803702}
+  m_Layer: 0
+  m_Name: Credits to Menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1966803702
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966803701}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 588d1997aa423c44c907293c47124039, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -2122308048564517092, guid: 588d1997aa423c44c907293c47124039, type: 2}
+    value: {fileID: 1754192246}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1966803703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966803701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.29439, y: -5.0462437, z: -42.130283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1972853311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22580,7 +22670,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1977750778
 GameObject:
@@ -24190,6 +24280,8 @@ MonoBehaviour:
   SciVAtoGame: {fileID: 1086287168}
   SciGametoControls: {fileID: 417974441}
   SciControlstoGame: {fileID: 1182683229}
+  SciMenutoCredits: {fileID: 1596507726}
+  SciCreditstoMenu: {fileID: 1966803702}
 --- !u!4 &2131349239
 Transform:
   m_ObjectHideFlags: 0
