@@ -12,6 +12,8 @@ public class Pickup : MonoBehaviour
     Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
 
+    public int HealthToGive = 50;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,17 +36,18 @@ public class Pickup : MonoBehaviour
         PickupModel.transform.position = tempPos;
     }
 
-    
-
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Something Entered");
-
-        if (other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player")
         {
             if (PickupModel.name.Contains("Medkit"))
             {
-                other.gameObject.GetComponent<PlayerHealth>().Health += 50;
+                if (other.gameObject.GetComponent<PlayerHealth>().Health < 100)
+                {
+                    other.gameObject.GetComponent<PlayerHealth>().Health += HealthToGive;
+                    Destroy(gameObject);
+                }
+
             }
             else
             {

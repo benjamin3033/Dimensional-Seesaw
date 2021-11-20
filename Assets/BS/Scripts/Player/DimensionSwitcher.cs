@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DimensionSwitcher : MonoBehaviour
 {
@@ -13,9 +14,20 @@ public class DimensionSwitcher : MonoBehaviour
     float switchingTimer;
     bool canSwitch = false;
 
+    int switchAmount = 100;
+
     // Update is called once per frame
     void Update()
     {
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            switchAmount = 100;
+        }
+        else if(SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            switchAmount = 200;
+        }
+
         if(playerSwitching > 0.1 && !Settings.isPaused && canSwitch)
         {
             SwitchDim();
@@ -45,14 +57,14 @@ public class DimensionSwitcher : MonoBehaviour
         if(isOld)
         {
             charCont.enabled = false;
-            transform.position = new Vector3(transform.position.x - 100, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x - switchAmount, transform.position.y, transform.position.z);
             charCont.enabled = true;
             isOld = false;
         }
         else
         {
             charCont.enabled = false;
-            transform.position = new Vector3(transform.position.x + 100, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x + switchAmount, transform.position.y, transform.position.z);
             charCont.enabled = true;
             isOld = true;
         }

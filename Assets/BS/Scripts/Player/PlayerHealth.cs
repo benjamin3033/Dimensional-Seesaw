@@ -4,18 +4,26 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int Health = 100;
+    public float Health = 100;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Health <= 0)
+        Health -= Time.deltaTime;
+
+        if (Health > 100)
+        {
+            Health = 100;
+        }
+
+        if (Health <= 0)
         {
             // Die
         }

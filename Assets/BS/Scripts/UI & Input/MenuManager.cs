@@ -10,14 +10,35 @@ public class MenuManager : MonoBehaviour
     public Canvas OptionsCanvas = null;
     public Canvas CreditsCanvas = null;
     public Canvas QuitConfirmationCanvas = null;
+    public Canvas LoadingCanvas = null;
+
+    public Slider LoadingSlider = null;
 
     bool optionsOn = false;
     bool creditsOn = false;
     bool quitOn = false;
 
+    private void Update()
+    {
+        
+    }
+
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        LoadingCanvas.gameObject.SetActive(true);
+        StartCoroutine(LoadGameAsync());
+    }
+
+    IEnumerator LoadGameAsync()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
+        
+
+        while (!asyncLoad.isDone)
+        {
+            LoadingSlider.value = Mathf.Clamp01(asyncLoad.progress / 0.9f);
+            yield return null;
+        }
     }
 
     public void Options()

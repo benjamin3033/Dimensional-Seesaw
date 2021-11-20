@@ -1,0 +1,2 @@
+Assets/BS/Scenes/Level[[:space:]]1/LightingData.asset filter=lfs diff=lfs merge=lfs -text
+Assets/BS/Scenes/Level[[:space:]]2/LightingData.asset filter=lfs diff=lfs merge=lfs -text
