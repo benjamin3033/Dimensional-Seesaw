@@ -8,7 +8,7 @@ public class HUDManager : MonoBehaviour
     public Text PlayerHealthText = null;
     public GameObject PlayerController = null;
 
-    int playerHealth;
+    float playerHealth;
 
     private void Update()
     {
@@ -18,6 +18,6 @@ public class HUDManager : MonoBehaviour
     void UpdatePlayerHealth()
     {
         playerHealth = PlayerController.GetComponent<PlayerHealth>().Health;
-        PlayerHealthText.text = "Health: " + playerHealth;
+        PlayerHealthText.text = "Health: " + (int)playerHealth;
     }
 }
