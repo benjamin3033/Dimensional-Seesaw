@@ -61679,10 +61679,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2005919594}
     m_Modifications:
-    - target: {fileID: 304674642236422063, guid: 45f85937532c16c43978faacdaf44391, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1509350690973944130, guid: 45f85937532c16c43978faacdaf44391, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -61743,6 +61739,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD:Assets/BS/Scenes/Level 1.unity
     - target: {fileID: 4762717913886446295, guid: 45f85937532c16c43978faacdaf44391, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -61755,6 +61752,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+=======
+>>>>>>> Kyle:Assets/BS/Scenes/TestScene.unity
     - target: {fileID: 5735164755672673916, guid: 45f85937532c16c43978faacdaf44391, type: 3}
       propertyPath: m_Lightmapping
       value: 2

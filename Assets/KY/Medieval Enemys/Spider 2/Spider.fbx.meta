@@ -9,6 +9,9 @@ ModelImporter:
   - first:
       74: -6939558796833791085
     second: Armature|SpiderAction
+  - first:
+      74: -5321794516564851478
+    second: Armature|Armature|Armature|SpiderAction|Armature|SpiderAction
   externalObjects: {}
   materials:
     materialImportMode: 1
