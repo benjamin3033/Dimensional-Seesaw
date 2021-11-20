@@ -24,12 +24,16 @@ public class WeaponShooting : MonoBehaviour
     [Header("Laser Gun")] // Laser gun Variables
     public float laserSpeed = 1000;
     public float LaserDelay = 1f;
+    public int LaserDamage = 10;
 
     [Header("Crossbow")] // Crossbow Variables
     public float boltSpeed = 500;
     public float boltDelay = 1f;
+    public int BoltDamage = 35;
 
     public float WeaponSwitchSpeed = 1f;
+    public int doubleDamage = 1;
+    public float damageTimer;
 
     // Private Variables
     GameObject bullet;
@@ -45,6 +49,8 @@ public class WeaponShooting : MonoBehaviour
     float playerShooting = 0;
     float playerSwitching = 0;
     
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +68,8 @@ public class WeaponShooting : MonoBehaviour
     {
         ReactToInput();
         Switching();
+        DamageTimer();
+        Debug.Log(doubleDamage);
     }
 
     void Switching()
@@ -85,6 +93,19 @@ public class WeaponShooting : MonoBehaviour
             bullet = bolt;
             bulletSpeed = boltSpeed;
             ChosenTimer = boltDelay;
+        }
+    }
+
+    public void DamageTimer()
+    {
+        if (damageTimer > 0)
+        {
+            doubleDamage = 2;
+            damageTimer -= Time.deltaTime;
+        }
+        else
+        {
+            doubleDamage = 1;
         }
     }
 
@@ -141,6 +162,15 @@ public class WeaponShooting : MonoBehaviour
     {
         CanFire = false;
         GameObject clone = Instantiate(bullet, barrel.transform.position, barrel.transform.rotation);
+        if(isLaserWeapon)
+        {
+            clone.GetComponent<Bullet>().Damage = LaserDamage * doubleDamage;
+        }
+        else
+        {
+            clone.GetComponent<Bullet>().Damage = BoltDamage * doubleDamage;
+        }
+        
         clone.GetComponent<Rigidbody>().AddForce(barrel.transform.up * bulletSpeed);
     }
 
