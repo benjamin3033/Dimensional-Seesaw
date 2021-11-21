@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+#pragma warning disable 649
+
     public GameObject PickupModel = null;
     [SerializeField] private Vector3 _Rotation;
     public float amplitude = 0.5f;
