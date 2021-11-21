@@ -69,7 +69,6 @@ public class WeaponShooting : MonoBehaviour
         ReactToInput();
         Switching();
         DamageTimer();
-        Debug.Log(doubleDamage);
     }
 
     void Switching()

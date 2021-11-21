@@ -21,8 +21,8 @@ TagManager:
   - PostProcessing
   - Player
   - DontCollideWithPlayer
-  - 
-  - 
+  - Player Projectile
+  - Enemy Projectile
   - 
   - 
   - 
