@@ -13,6 +13,7 @@ public class Pickup : MonoBehaviour
     Vector3 tempPos = new Vector3();
 
     public int HealthToGive = 50;
+    public float DoubleDamageLength = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -49,9 +50,10 @@ public class Pickup : MonoBehaviour
                 }
 
             }
-            else
+            else if(PickupModel.name.Contains("DoubleDamage"))
             {
-
+                other.gameObject.GetComponent<WeaponShooting>().damageTimer = DoubleDamageLength;
+                Destroy(gameObject);
             }
         }
     }

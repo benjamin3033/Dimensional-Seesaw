@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8024381130198491499}
   - component: {fileID: 3000035335939610457}
   - component: {fileID: 3578245396287052753}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: EnergyBall
   m_TagString: Projectile
   m_Icon: {fileID: 0}
