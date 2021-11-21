@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int Health = 100;
+    public float Health = 100;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        Health -= Time.deltaTime;
 
         if (Health > 100)
         {
