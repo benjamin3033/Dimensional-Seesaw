@@ -69,6 +69,9 @@ public class WeaponShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log("CanFire = " + CanFire);
+        //Debug.Log("shootingTimer = " + shootingTimer);
+
         ReactToInput();
         Switching();
         DamageTimer();
@@ -123,10 +126,13 @@ public class WeaponShooting : MonoBehaviour
 
     void ReactToInput()
     {
-        if (playerShooting > 0.1 && !Settings.isPaused && CanFire)
+        if (playerShooting > 0.001f && !Settings.isPaused && CanFire)
         {
+            Debug.Log("Going To Fire" + Time.time);
+            CanFire = false;
             FireBullet();
             WeaponKickBack();
+            shootingTimer = ChosenTimer;
         }
         else if (!CanFire)
         {
@@ -147,6 +153,7 @@ public class WeaponShooting : MonoBehaviour
         if (playerSwitching > 0.1 && !Settings.isPaused && canSwitch)
         {
             isLaserWeapon = !isLaserWeapon;
+            shootingTimer = 0;
             canSwitch = false;
         }
         else if(!canSwitch)
@@ -165,7 +172,6 @@ public class WeaponShooting : MonoBehaviour
 
     void FireBullet()
     {
-        CanFire = false;
         ModelArrow.SetActive(false);
         PullBackRope.SetActive(false);
         RopeFired.SetActive(true);
