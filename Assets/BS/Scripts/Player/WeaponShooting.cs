@@ -30,6 +30,9 @@ public class WeaponShooting : MonoBehaviour
     public float boltSpeed = 500;
     public float boltDelay = 1f;
     public int BoltDamage = 35;
+    public GameObject ModelArrow = null;
+    public GameObject PullBackRope = null;
+    public GameObject RopeFired = null;
 
     public float WeaponSwitchSpeed = 1f;
     public int doubleDamage = 1;
@@ -135,6 +138,9 @@ public class WeaponShooting : MonoBehaviour
             {
                 shootingTimer = ChosenTimer;
                 CanFire = true;
+                ModelArrow.SetActive(true);
+                PullBackRope.SetActive(true);
+                RopeFired.SetActive(false);
             }
         }
 
@@ -160,6 +166,9 @@ public class WeaponShooting : MonoBehaviour
     void FireBullet()
     {
         CanFire = false;
+        ModelArrow.SetActive(false);
+        PullBackRope.SetActive(false);
+        RopeFired.SetActive(true);
         GameObject clone = Instantiate(bullet, barrel.transform.position, barrel.transform.rotation);
         if(isLaserWeapon)
         {
