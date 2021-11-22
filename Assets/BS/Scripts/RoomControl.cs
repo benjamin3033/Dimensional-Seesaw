@@ -6,8 +6,13 @@ public class RoomControl : MonoBehaviour
 {
     public List<GameObject> Enemies = new List<GameObject>();
     public GameObject Exit = null, Entry = null;
+    public GameObject HUDManagerObject = null;
+
+    HUDManager HudManager;
 
     bool EnemiesDead = false;
+
+    public string TipString = "";
 
     public bool isFloatingHeadRoom;
     public bool isTurretRoom;
@@ -15,7 +20,7 @@ public class RoomControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        HudManager = HUDManagerObject.GetComponent<HUDManager>();
     }
 
     // Update is called once per frame
@@ -27,6 +32,7 @@ public class RoomControl : MonoBehaviour
             {
                 Destroy(Exit);
             }
+            HudManager.SetPlayerTip("");
             EnemiesDead = true;
         }
         else
@@ -45,6 +51,7 @@ public class RoomControl : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            HudManager.SetPlayerTip(TipString);
             if(Entry != null)
             {
                 Entry.SetActive(true);

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HUDManager : MonoBehaviour
 {
     public Text PlayerHealthText = null;
+    public Text PlayerTipText = null;
     public GameObject PlayerController = null;
 
     float playerHealth;
@@ -13,6 +14,11 @@ public class HUDManager : MonoBehaviour
     private void Update()
     {
         UpdatePlayerHealth();
+    }
+
+    public void SetPlayerTip(string tipString)
+    {
+        PlayerTipText.text = "" + tipString;
     }
 
     void UpdatePlayerHealth()
