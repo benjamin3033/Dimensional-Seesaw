@@ -69,9 +69,6 @@ public class WeaponShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("CanFire = " + CanFire);
-        //Debug.Log("shootingTimer = " + shootingTimer);
-
         ReactToInput();
         Switching();
         DamageTimer();
@@ -128,7 +125,6 @@ public class WeaponShooting : MonoBehaviour
     {
         if (playerShooting > 0.001f && !Settings.isPaused && CanFire)
         {
-            Debug.Log("Going To Fire" + Time.time);
             CanFire = false;
             FireBullet();
             WeaponKickBack();
